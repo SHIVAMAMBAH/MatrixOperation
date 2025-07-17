@@ -35,7 +35,8 @@ def matrix_transpose(a:np.ndarray)->np.ndarray:
 
 def matrix_adjoint(a:Matrix)->Matrix:
     '''This function takes a matrix as input and return its adjoint and is written using sympy'''
-    return a.adjugate()
+    
+    return np.array(a.adjugate()).astype(np.float64)
 
 def matrix_determinant(a:np.ndarray)->np.float32:
     '''This function takes a square matrix as input and returns it's transpose'''
