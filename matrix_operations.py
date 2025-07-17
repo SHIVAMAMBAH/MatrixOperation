@@ -33,10 +33,23 @@ def matrix_transpose(a:np.ndarray)->np.ndarray:
 
     return np.transpose(a)
 
-def matrix_adjoint(a:np.ndarray)->np.ndarray:
-    '''This function takes a matrix as input and return its adjoint and is written using sympy'''
-    a = Matrix(a)
-    return np.array(a.adjugate()).astype(np.float64)
+def matrix_adjoint(a: np.ndarray) -> np.ndarray:
+    """
+    Compute the adjoint (adjugate) of a square matrix using SymPy and return it as a NumPy ndarray.
+    
+    Parameters:
+    a (np.ndarray): A square matrix of shape (n, n)
+    
+    Returns:
+    np.ndarray: The adjoint of the matrix, as a NumPy array
+    """
+    if a.shape[0] != a.shape[1]:
+        raise ValueError("Input must be a square matrix.")
+    
+    sympy_matrix = Matrix(a)
+    adjoint_matrix = sympy_matrix.adjugate()
+    
+    return np.array(adjoint_matrix).astype(np.float64)
 
 def matrix_determinant(a:np.ndarray)->np.float32:
     '''This function takes a square matrix as input and returns it's transpose'''
