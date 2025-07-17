@@ -80,6 +80,6 @@ elif operation in ["Transpose", "Determinant", "Inverse", "Trace", "Adjoint"]:
                 else:
                     st.write("Matrix must be square fo trace.")
             elif operation == "Adjoint":
-                 st.write(mo.matrix_adjoint)
+                 st.write(mo.matrix_adjoint(A))
         except Exception as e:
             st.error(f"Error: {e}")
