@@ -6,7 +6,7 @@ import matrix_operations as mo
 st.set_page_config(
     page_title="Matrix Master",  
     page_icon="🔢",              # You can use an emoji or a custom image
-    layout="centered"            # Or "wide"
+    layout="centered"            
 )
 
 
