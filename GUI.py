@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 
 def matrix_input(name = "Matrix", rows = 3, cols = 3):
+    
     st.write(f"Enter values for **{name}**")
     matrix = []
 

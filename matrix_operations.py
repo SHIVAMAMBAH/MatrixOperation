@@ -1,4 +1,5 @@
 import numpy as np
+from sympy import Matrix
 from typing import Union
 
 
@@ -31,6 +32,10 @@ def matrix_transpose(a:np.ndarray)->np.ndarray:
     '''This function takes one input Matrix and returns its transpose.'''
 
     return np.transpose(a)
+
+def matrix_adjoint(a:Matrix)->Matrix:
+    '''This function takes a matrix as input and return its adjoint and is written using sympy'''
+    return a.adjugate()
 
 def matrix_determinant(a:np.ndarray)->np.float32:
     '''This function takes a square matrix as input and returns it's transpose'''
